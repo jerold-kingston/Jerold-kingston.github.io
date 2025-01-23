@@ -1,42 +1,162 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="styles.css">
-        <title >Jerold Kingston</title>
-    </head>
-    <body>
-        <div class="header">
-            <div id="profilePic">
-                <img src="assets/jerold.png" alt="Jerold">
-            </div>
-            <div id="aboutMe">
-                <div id="quickStack">
-                    <a class="quickAccess" href="#projects">Projects</a>
-                    <a class="quickAccess" href="#publication">Publications</a>
-                    <a class="quickAccess" style="text-decoration: underline;" onclick="downloadResume()">Resume</a>
-                    <a class="quickAccess" href="#contact">Contact</a>
-                </div>
-            <h1>Jerold kingston Gnanasekaran</h1>
-            <p><b>About me</b><p>
-            <p>A dedicated Research Engineer with expertise in DevOps and software development. I specialize in advancing telecommunications, improving connectivity, and enhancing cloud-native deployments, with a focus on advancing 4G and 5G technologies</p>
-            </div>
-        </div>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>Jerold Kingston</title>
+    <style>
+        body {
+            scroll-behavior: smooth;
+        }
 
-</p>
-<div class="main">
-    <div>
-        <h1> Experience </h1>
+        .main {
+            max-width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        h1 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        .header {
+            display: flex;
+            width: 100%;
+            margin: 0 auto;
+            border-bottom: 1px solid #3c3c3c;
+            background-color: black;
+            background-image: url(assets/header_background.png);
+            color: white;
+            padding: 10px;
+            max-width: 100%;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        .quickAccess {
+            padding: 10px;
+            color: #e1e7ec;
+            cursor: pointer;
+        }
+
+        .quickAccess:hover {
+            color: yellow;
+            text-decoration: underline;
+        }
+
+        #profilePic {
+            width: 260px;
+            min-width: 260px;
+            height: 200px;
+            min-height: 200px;
+            padding: 20px;
+            padding-bottom: 30px;
+            border-right: 1px solid #ccc;
+        }
+
+        #aboutMe {
+            flex-grow: 1;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div id="profilePic">
+            <img src="assets/jerold.png" alt="Jerold">
+        </div>
+        <div id="aboutMe">
+            <div id="quickStack">
+                <a class="quickAccess" href="#experience">Experience</a>
+                <a class="quickAccess" href="#projects">Projects</a>
+                <a class="quickAccess" href="#publication">Publications</a>
+                <a class="quickAccess" onclick="downloadResume()">Resume</a>
+                <a class="quickAccess" href="#contact">Contact</a>
+            </div>
+            <h1>Jerold Kingston Gnanasekaran</h1>
+            <p><b>About Me</b></p>
+            <p>A dedicated Research Engineer with expertise in DevOps and software development. I specialize in advancing telecommunications, improving connectivity, and enhancing cloud-native deployments, with a focus on advancing 4G and 5G technologies.</p>
+        </div>
     </div>
-    <div>
-        <h1 id="projects"> Projects </h1>
+
+    <div class="main">
+        <section id="experience">
+            <h1>Experience</h1>
+            <p><b>Research Engineer, Eurecom (2024 - Present):</b> Developed Helm-based applications, integrated RAN control network slicing, and worked on deep reinforcement learning for DRX optimization.</p>
+            <p><b>Software Developer, Eurecom (2023):</b> Created production-grade xApps for traffic steering, load balancing, and energy saving using C++, Go, and Python.</p>
+        </section>
+        
+        <section id="projects">
+            <h1>Projects</h1>
+            <ul>
+                <li><b>5G Intelligent System:</b> Enhanced RAN performance metrics with OpenAirInterface software.</li>
+                <li><b>DRX Optimization xApp:</b> Developed deep reinforcement learning models for energy-efficient communication.</li>
+                <li><b>Mobility Management:</b> Designed xApps for mobility data collection and integrated into FlexRIC.</li>
+            </ul>
+        </section>
+
+        <section id="publication">
+            <h1>Publications</h1>
+            <ul>
+                <li><b>"Greening 5G:":</b> Empowering Dynamic DRX With Deep Reinforcement Learning and O-RAN (IEEE).</li>
+                <li><b>"Video Analysis Using Deep Learning for Women Safety":</b> Published in Springer, 2023.</li>
+                <li><b>"Voice-Controlled Robotic Arm":</b> Published in IJAST, 2020.</li>
+            </ul>
+        </section>
+
+        <section id="skills">
+            <h1>Skills</h1>
+            <ul>
+                <li>Programming: C/C++, Python, Go, Core Java</li>
+                <li>DevOps: Docker, Kubernetes, Helm, CI/CD</li>
+                <li>Networking: TCP/IP, LAN/WAN, Router Configuration</li>
+                <li>Cloud: Microsoft Azure</li>
+                <li>Languages: Fluent in English, Tamil; Basic in French</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h1>Contact</h1>
+            <p>Email: jerold.kingston77@gmail.com</p>
+            <p>Phone: +33 0767273543</p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/jerold-jk">linkedin.com/in/jerold-jk</a></p>
+            <p>GitHub: <a href="https://github.com/Jerold-kingston">github.com/Jerold-kingston</a></p>
+        </section>
     </div>
-    <div>
-        <h1 id="publication"> Publication </h1>
-    </div>
-    <div>
-        <h1 id="skills"> Skills </h1>
-    </div>
-</div>
-    </body>
+
+    <script>
+        function downloadResume() {
+            alert('Downloading resume...');
+            window.location.href = 'assets/Jerold_Kingston_Resume.pdf';
+        }
+
+        document.querySelectorAll('.quickAccess').forEach(link => {
+            link.addEventListener('mouseenter', () => {
+                link.style.color = 'yellow';
+            });
+
+            link.addEventListener('mouseleave', () => {
+                link.style.color = '#e1e7ec';
+            });
+        });
+
+        // Smooth scrolling to sections
+        document.querySelectorAll('.quickAccess').forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
 </html>
