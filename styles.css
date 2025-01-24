@@ -11,6 +11,7 @@ body {
     background-repeat: no-repeat; /* Prevent tiling */
     background-position: center center; /* Center the image */
     background-attachment: fixed;
+    scroll-behavior: smooth;
 }
 
 p {
@@ -77,10 +78,15 @@ img {
 
 .main{
     display:flex;
-    padding-left: 20%;
+    padding-left: 5%;
     flex-direction: column;
+}
+
+#experience p{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 
 }
 
-
-
+#experience {
+    padding-right: 10%;
+}

@@ -4,69 +4,6 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="styles.css">
     <title>Jerold Kingston</title>
-    <style>
-        body {
-            scroll-behavior: smooth;
-        }
-
-        .main {
-            max-width: 80%;
-            margin: 0 auto;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 40px;
-        }
-
-        h1 {
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        }
-
-        section {
-            margin-bottom: 50px;
-        }
-
-        .header {
-            display: flex;
-            width: 100%;
-            margin: 0 auto;
-            border-bottom: 1px solid #3c3c3c;
-            background-color: black;
-            background-image: url(assets/header_background.png);
-            color: white;
-            padding: 10px;
-            max-width: 100%;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
-        }
-
-        .quickAccess {
-            padding: 10px;
-            color: #e1e7ec;
-            cursor: pointer;
-        }
-
-        .quickAccess:hover {
-            color: yellow;
-            text-decoration: underline;
-        }
-
-        #profilePic {
-            width: 260px;
-            min-width: 260px;
-            height: 200px;
-            min-height: 200px;
-            padding: 20px;
-            padding-bottom: 30px;
-            border-right: 1px solid #ccc;
-        }
-
-        #aboutMe {
-            flex-grow: 1;
-            padding-left: 20px;
-        }
-    </style>
 </head>
 <body>
     <div class="header">
@@ -78,20 +15,31 @@
                 <a class="quickAccess" href="#experience">Experience</a>
                 <a class="quickAccess" href="#projects">Projects</a>
                 <a class="quickAccess" href="#publication">Publications</a>
-                <a class="quickAccess" onclick="downloadResume()">Resume</a>
                 <a class="quickAccess" href="#contact">Contact</a>
+                <a class="quickAccess" onclick="downloadResume()">Resume</a>
+
             </div>
             <h1>Jerold Kingston Gnanasekaran</h1>
             <p><b>About Me</b></p>
-            <p>A dedicated Research Engineer with expertise in DevOps and software development. I specialize in advancing telecommunications, improving connectivity, and enhancing cloud-native deployments, with a focus on advancing 4G and 5G technologies.</p>
+            <p>Proactive and skilled professional with a strong educational background in telecommunication. Experienced in supporting and executing high-level projects, with expertise in network structures, routing, and mobility technologies. A quick learner with excellent communication and organizational skills, capable of delivering effective technical solutions and managing responsibilities independently.</p>
         </div>
     </div>
-
     <div class="main">
         <section id="experience">
             <h1>Experience</h1>
-            <p><b>Research Engineer, Eurecom (2024 - Present):</b> Developed Helm-based applications, integrated RAN control network slicing, and worked on deep reinforcement learning for DRX optimization.</p>
-            <p><b>Software Developer, Eurecom (2023):</b> Created production-grade xApps for traffic steering, load balancing, and energy saving using C++, Go, and Python.</p>
+            <p><b>Research Engineer<br>
+                  Eurecom, Biot, France &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2024 - Present)</b> </p>
+                  <li>Contributed to a European project by developing Helm-based applications, developed a Command line interface (CLI) to interact with nodes and pods, facilitating traffic management within Kubernetes clusters using REST APIs. </li>
+                  <li>Collaborated with the Samsung R&D team to integrate a RAN control service model for conducting machine-learning analysis using OpenAIrInterface (OAI) software. </li>
+                  <li>Improved Quality-of-service (QOS) by creating a dynamic Discontinuous reception Energy saver (D-DRXES) application using a deep reinforcement learning (DRL) based Deep Q-Network algorithm and achieved 50% power saving in OAI software.</li>
+                  <li>Designed and developed a Handover and data monitoring xApp for the ns-3 simulator and integrated it into FlexRIC (Near-RT RIC ) to enable a large-scale testing platform for OAI software. </li>
+            <br>
+            <p><b>Software Developer<br>
+                  Eurecom, Biot, France &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  (2023 - 2024)</b> </p>
+                  <li>Developed a cloud-native, production-grade software application (xApp) for multiple use cases, including traffic steering, load balancing, slice SLA and energy saving, Developed applications in C++, Go and Python.</li>
+                  <li>Designed a new software framework (xApp Framework) and an interface to address latency and policy enforcement challenges.</li>
+                  <li>Authored comprehensive procedures, reports, and technical documents using clear and accessible terminology.</li>
+            </p>
         </section>
         
         <section id="projects">
@@ -131,32 +79,6 @@
             <p>GitHub: <a href="https://github.com/Jerold-kingston">github.com/Jerold-kingston</a></p>
         </section>
     </div>
-
-    <script>
-        function downloadResume() {
-            alert('Downloading resume...');
-            window.location.href = 'assets/Jerold_Kingston_Resume.pdf';
-        }
-
-        document.querySelectorAll('.quickAccess').forEach(link => {
-            link.addEventListener('mouseenter', () => {
-                link.style.color = 'yellow';
-            });
-
-            link.addEventListener('mouseleave', () => {
-                link.style.color = '#e1e7ec';
-            });
-        });
-
-        // Smooth scrolling to sections
-        document.querySelectorAll('.quickAccess').forEach(link => {
-            link.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href').substring(1);
-                const targetElement = document.getElementById(targetId);
-                targetElement.scrollIntoView({ behavior: 'smooth' });
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
